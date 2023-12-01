@@ -7,6 +7,18 @@
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    /* For Firefox */
+    scrollbar-color: grey transparent; /* ascensseur bleu sur fond blanc */
+}
+
+/* Other Nav */
+::-webkit-scrollbar {
+    background: #1E1E1E;
+}
+::-webkit-scrollbar-thumb {
+    scrollbar-width: 2px;
+    border-radius: 25px;
+    background-color: grey;
 }
 
 a {
@@ -187,18 +199,17 @@ main > section > div {
     overflow: visible;
 } 
 
-.about-me, .about-me * {
-    box-sizing: border-box;
-    margin-top: -255px;
+.about-me {
+    margin-top: -45rem;
     margin-bottom: 150px;
-    position: relative;
+    margin-left: -250px;
     align-self: center;
-}
-.about-me h2{
-    color: #FAF4F4;
-    text-align: left;
     font: 600 50px 'Outfit', sans-serif;
-    margin-left: -14rem;
+    position: relative;
+}
+
+.about-me h2 {
+    font: 600 50px 'Outfit', sans-serif;
 }
 
 .animated-text, .animated-text * {
@@ -462,17 +473,16 @@ main > section > div {
     behavior: smooth;
 }
 
-.contact, .contact * {
-    box-sizing: border-box;
-    margin-top: -255px;
-    margin-left: -70px;
+.contact {
+    margin-top: -45rem;
     margin-bottom: 150px;
-    position: relative;
+    margin-left: -130px;
     align-self: center;
+    font: 600 50px 'Outfit', sans-serif;
+    position: relative;
 }
-.contact h2{
-    color: #FAF4F4;
-    text-align: left;
+
+.contact h2 {
     font: 600 50px 'Outfit', sans-serif;
 }
 
