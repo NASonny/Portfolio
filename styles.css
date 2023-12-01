@@ -497,7 +497,7 @@ input, textarea {
     padding: 10px;
     max-height: 150px;
     outline: 0;
-    border-radius: 17px;
+    border-radius: 5px;
     border-style: solid;
     border-color: #ffffff;
     border-width: 2px; 
