@@ -3,13 +3,79 @@ window.addEventListener('beforeunload', function() {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-    const smoothScrollButtons = document.querySelectorAll(".button-86");
+    const smoothScrollButtons = document.querySelectorAll(".home");
+
+    smoothScrollButtons.forEach(function(button) {
+        button.addEventListener("click", function(event) {
+            event.preventDefault();
+
+            const targetElement = document.getElementById("section-1");
+
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const smoothScrollButtons = document.querySelectorAll(".aboutme");
+
+    smoothScrollButtons.forEach(function(button) {
+        button.addEventListener("click", function(event) {
+            event.preventDefault();
+
+            const targetElement = document.getElementById("section-2");
+
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const smoothScrollButtons = document.querySelectorAll(".project");
+
+    smoothScrollButtons.forEach(function(button) {
+        button.addEventListener("click", function(event) {
+            event.preventDefault();
+
+            const targetElement = document.getElementById("section-4");
+
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const smoothScrollButtons = document.querySelectorAll(".contact-me");
 
     smoothScrollButtons.forEach(function(button) {
         button.addEventListener("click", function(event) {
             event.preventDefault();
 
             const targetElement = document.getElementById("section-5");
+
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const smoothScrollButtons = document.querySelectorAll(".github");
+
+    smoothScrollButtons.forEach(function(button) {
+        button.addEventListener("click", function(event) {
+            event.preventDefault();
+
+            const targetElement = document.getElementById("section-6");
 
             if (targetElement) {
                 targetElement.scrollIntoView({ behavior: 'smooth' });
