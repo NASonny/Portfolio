@@ -18,7 +18,7 @@
     background: #1E1E1E;
 }
 ::-webkit-scrollbar-thumb {
-    scrollbar-width: 2px;
+    scrollbar-width: auto;
     border-radius: 25px;
     background-color: grey;
 }
@@ -31,7 +31,6 @@ main {
     height: 100vh;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
-    /* scroll-snap-type: y proximity; */
 }
 
 main > section {
@@ -227,7 +226,7 @@ main > section > div {
     height: 165px;
 }
 
-@media screen and (max-device-width: 480px) and (orientation: portrait) {
+@media screen and (max-width: 480px) and (orientation: portrait) {
     
     .image-of-myself {
         margin-top: -15px;
@@ -446,7 +445,6 @@ main > section > div {
     display: flex;
     align-self: center;
     justify-content: center;
-    behavior: smooth;
 }
 
 .contact {
