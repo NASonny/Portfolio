@@ -93,7 +93,7 @@ const phrases = ["Full-stack Developer.", "Software Developer.","Dreamer."];
 document.addEventListener("DOMContentLoaded", function() {
     const el = document.getElementById("typewriter");
     
-    let sleepTime = 100;
+    let sleepTime = 50;
     
     let curPhraseIndex = 0;
     
