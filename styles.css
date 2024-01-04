@@ -12,6 +12,8 @@
 	/* ascensseur bleu sur fond blanc */
 }
 
+/*! ISSUE : refaire tout le site correctement après avoir fait le truc sur opclassroom*/
+
 /* Other Nav */
 
 ::-webkit-scrollbar {
@@ -103,6 +105,7 @@ main>section>div {
 /* SECTION 1 */
 
 #section-1 {
+	min-height: 100vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -162,6 +165,11 @@ main>section>div {
 }
 
 /* SECTION 2 */
+
+#section-2 {
+	min-height: 100vh;
+	display: flex;
+}
 
 .image-of-myself, .image-of-myself * {
 	box-sizing: border-box;
@@ -436,6 +444,7 @@ main>section>div {
 /* SECTION 5 */
 
 #section-5 {
+	min-height: 100vh;
 	display: flex;
 	align-self: center;
 	justify-content: center;
@@ -593,6 +602,7 @@ input:focus~label, input:valid~label, textarea:focus~label, textarea:valid~label
 /* SECTION 6 */
 
 #section-6 {
+	min-height: 100vh;
 	position: relative;
 	text-align: center;
 }
