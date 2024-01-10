@@ -13,6 +13,11 @@
 }
 
 /*! ISSUE : refaire tout le site correctement après avoir fait le truc sur opclassroom*/
+/** Chose à changé principalement : font-size passer en em et pas en px **/
+/** Chose à changé principalement : check les sizes avec des border  **/
+/** Chose à changé principalement : faire par rapport au div et non au contenu du container **/
+/** Chose à changé principalement : On va faire par étapes on gere d'abord le desktop et ensuite on fait les breakpoint et on va faire ça avec tout les pages 
+j'ai désactivé les autres pages en attendant donc comme ça on peut faire les truc et savoir qui casse quoi **/
 
 /* Other Nav */
 
@@ -59,7 +64,7 @@ main>section>div {
 /* NAVBAR */
 
 .navbar {
-	z-index: 3;
+	z-index: 1;
 	position: absolute;
 	padding: 50px;
 	display: flex;
@@ -86,7 +91,7 @@ main>section>div {
 	margin: 0 25px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 960px) {
 	.navbar {
 		display: none;
 		padding: 0;
@@ -111,17 +116,30 @@ main>section>div {
 	justify-content: center;
 }
 
+.container-1 {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 1300px;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.section_1_3Dimg{
+	display: flex;
+	position: absolute;
+}
+
 ._3Dlaptop, ._3Dlaptop * {
 	box-sizing: border-box;
 	user-select: none;
 }
 
 ._3Dlaptop {
-	width: 654px;
-	height: 542px;
-	margin: 150px;
-	margin-left: -250px;
-	position: relative;
+	max-width: 580px;
+	height: 580px;
+	margin-inline: 50px;
+	position:relative;
 	transform: scaleX(-1);
 }
 
@@ -131,8 +149,11 @@ main>section>div {
 }
 
 .welcome {
-	text-align: left;
-	font: 600 96px 'Outfit', sans-serif;
+	
+	margin-inline: 50px;
+	display: flex;
+	justify-content: center;
+	text-align: center;
 	position: relative;
 }
 
@@ -149,12 +170,27 @@ main>section>div {
 	-webkit-text-fill-color: transparent;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 660px) {
 	._3Dlaptop {
-		display: none;
+		width: 450px;
+		height: 450px;
+		margin: 0;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	
+	.container-1 {
+		flex-direction: column;
+	}
+
+	._3Dlaptop {
+		width: 350px;
+		height: 350px;
+		margin: 0;
 	}
 	.welcome {
-		margin-left: 25px;
+		margin: 0;
 	}
 	.welcome-span {
 		font-size: 70px;
@@ -169,20 +205,26 @@ main>section>div {
 #section-2 {
 	min-height: 100vh;
 	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-.image-of-myself, .image-of-myself * {
+.img_sn {
+	width: 600px;
+	height: 600px;
+	margin-top: 200px;
+	margin-left: 150px;
+	position: relative;
+}
+
+.pfp_sn, .pfp_sn * {
 	box-sizing: border-box;
 	user-select: none;
 }
 
-.image-of-myself {
-	width: 100%;
-	height: 50rem;
-	margin-top: 30rem;
-	margin-left: 18rem;
+.pfp_sn {
+	margin: auto;
 	position: relative;
-	overflow: visible;
 }
 
 .about-me {
@@ -200,6 +242,8 @@ main>section>div {
 
 .animated-text, .animated-text * {
 	box-sizing: border-box;
+	width: auto;
+	height: 200px;
 	font: 600 40px 'Outfit', sans-serif;
 	user-select: none;
 }
@@ -243,9 +287,7 @@ main>section>div {
 		display: flex;
 		flex-direction: column;
 	}
-	.image-of-myself {
-		margin-top: -15px;
-		right: 50px;
+	.pfp_sn {
 		position: relative;
 	}
 	.about-me {
