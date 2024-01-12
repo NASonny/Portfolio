@@ -28,7 +28,7 @@ a {
 
 main {
 	max-height: 100vh;
-	background-color: #1E1E1E;
+	background: #1E1E1E;
 	background-size: auto;
 	overflow-y: scroll;
 	scroll-snap-type: y mandatory;
@@ -626,9 +626,6 @@ input:focus~label, input:valid~label, textarea:focus~label, textarea:valid~label
 		max-width: 80%;
 	}
 
-	.input-group {
-	}
-
 	.email {
 		margin-top: 10px;
 	}
@@ -813,20 +810,6 @@ input:focus~label, input:valid~label, textarea:focus~label, textarea:valid~label
 	}
 	.github-button button {
 		margin-top: 8rem;
-	}
-}
-
-@media screen and (max-width: 480px) {
-	
-	::-webkit-scrollbar-thumb {
-		display: none;
-	}
-	::-webkit-scrollbar {
-		display: none;  
-	}
-
-	body {
-		-ms-overflow-style: none;
 	}
 }
 
