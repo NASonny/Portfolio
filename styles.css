@@ -22,23 +22,13 @@ j'ai désactivé les autres pages en attendant donc comme ça on peut faire les 
 
 /* Other Nav */
 
-::-webkit-scrollbar {
-	background: #1E1E1E;
-}
-
-::-webkit-scrollbar-thumb {
-	scrollbar-width: auto;
-	border-radius: 25px;
-	background-color: grey;
-}
-
 a {
 	text-decoration: none;
 }
 
 main {
 	max-height: 100vh;
-	background-color: red;
+	background-color: #1E1E1E;
 	background-size: auto;
 	overflow-y: scroll;
 	scroll-snap-type: y mandatory;
@@ -490,28 +480,39 @@ main>section>div {
 #section-5 {
 	min-height: 100vh;
 	display: flex;
-	align-self: center;
+	align-items: center;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.container-3 {
+	max-width: 1500px;
+	height: auto;
+	width: 100%;
+	display: flex;
+	margin-bottom: 70px;
+	flex-wrap: wrap;
+	align-items: center;
 	justify-content: center;
 }
 
-.contact {
-	margin-top: -45rem;
-	margin-bottom: 150px;
-	margin-left: -130px;
-	align-self: center;
-	font: 600 50px 'Outfit', sans-serif;
-	position: relative;
+.title-3 {
+	flex-direction: column;
+	display: flex;
+	box-sizing: border-box;
+	flex-wrap: wrap;
 }
 
-.contact h2 {
+.contact {
 	font: 600 50px 'Outfit', sans-serif;
 }
 
 form {
 	width: 90%;
 	max-width: 600px;
-	margin-top: 18rem;
 	word-spacing: 5px;
+	padding: 25px;
+	margin-left: 90px;
 }
 
 .input-group {
@@ -539,7 +540,7 @@ input, textarea {
 
 label {
 	font-family: 'Outfit', sans-serif;
-	height: 100%;
+	height: auto;
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -568,11 +569,9 @@ input:focus~label, input:valid~label, textarea:focus~label, textarea:valid~label
 	top: -35px;
 }
 
-.container {
-	width: 700px;
+.container-glass {
+	width: 650px;
 	height: 300px;
-	margin-top: 21rem;
-	margin-left: -90rem;
 	position: relative;
 }
 
@@ -586,7 +585,7 @@ input:focus~label, input:valid~label, textarea:focus~label, textarea:valid~label
 }
 
 .h1-container {
-	font: 600 55px 'Outfit', sans-serif;
+	font: 600 50px 'Outfit', sans-serif;
 	text-align: center;
 	margin-top: 25px;
 	user-select: none;
@@ -612,34 +611,48 @@ input:focus~label, input:valid~label, textarea:focus~label, textarea:valid~label
 	margin-top: 5px;
 }
 
+@media screen and (max-width: 1392px) {
+}
+
 @media screen and (max-width: 480px) {
-	.glass {
-		margin-left: 200px;
-		top: 50%;
-		left: 9%;
-		width: 420px;
-		height: 125px;
-		transform: translate(-50%, -50%);
+
+
+	.title-3 {
+		margin-top: 20px;
 	}
-	.h1-container {
-		font: 600 24px 'Outfit', sans-serif;
-		text-align: center;
-		margin-top: 15px;
-		user-select: none;
+
+	form {
+		margin: 0;
+		max-width: 80%;
 	}
-	.description-container {
+
+	.input-group {
+	}
+
+	.email {
+		margin-top: 10px;
+	}
+
+	.linkedin {
+		margin-bottom: 10px;
+	}
+
+	.linkedin, .email {
+		font-size: 20px;
+	}
+
+	.container-glass {
+		width: 90%;
+		margin-bottom: 25px;
+		height: fit-content;
+	}
+
+	.container-glass .description-container {
 		display: none;
 	}
-	.email {
-		font: 500 20px 'Outfit', sans-serif;
-		text-align: center;
-		margin-top: 15px;
-		word-spacing: 5px;
-	}
-	.linkedin {
-		font: 500 20px 'Outfit', sans-serif;
-		text-align: center;
-		margin-top: 5px;
+
+	.h1-container {
+		font-size: 25px;
 	}
 }
 
@@ -648,17 +661,20 @@ input:focus~label, input:valid~label, textarea:focus~label, textarea:valid~label
 #section-6 {
 	min-height: 100vh;
 	position: relative;
+	display: flex;
 	text-align: center;
+	justify-content: center;
+}
+
+#canvas-container {
+	width: 100%;
+	height: 100%;
 }
 
 #c {
 	position: relative;
 	background: rgb(255, 255, 255);
 	opacity: 0.5;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
 	margin: auto;
 	pointer-events: none;
 }
@@ -790,12 +806,27 @@ input:focus~label, input:valid~label, textarea:focus~label, textarea:valid~label
 		width: 300px;
 	}
 	.description-source-code {
-		width: 380px;
+		width: 300px;
+		height: auto;
 		font-size: 20px;
 		margin-top: -25px;
 	}
 	.github-button button {
 		margin-top: 8rem;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	
+	::-webkit-scrollbar-thumb {
+		display: none;
+	}
+	::-webkit-scrollbar {
+		display: none;  
+	}
+
+	body {
+		-ms-overflow-style: none;
 	}
 }
 

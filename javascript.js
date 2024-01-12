@@ -160,7 +160,7 @@ document.addEventListener ("DOMContentLoaded", function() {
 
     });
 });
-  
+
 
 document.addEventListener("DOMContentLoaded", function() {
     var c = document.getElementById('c');
@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", function() {
     chinese = '0123456789ABCDEF';
 
     chinese = chinese.split('');
-    
+
     for (var x = 0; x < columns; x++) {
         drops[x] = 1;
     }
@@ -193,4 +193,26 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
     setInterval(draw, 33);
+
+    window.addEventListener('resize', resizeCanvas);
+
+    const canvasContainer = document.getElementById('canvas-container');
+
+    function resizeCanvas() {
+        c.width = canvasContainer.offsetWidth;
+        c.height = canvasContainer.offsetHeight;
+  
+        W = c.width;
+        H = c.height;
+
+        columns = W / font_size;
+  
+        drops = [];
+        for (var x = 0; x < columns; x++) {
+            drops[x] = 1; 
+        }
+    }
+
+    resizeCanvas();
+    
 });
