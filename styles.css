@@ -12,12 +12,13 @@
 	/* ascensseur bleu sur fond blanc */
 }
 
-/*! ISSUE : refaire tout le site correctement après avoir fait le truc sur opclassroom*/
-/** Chose à changé principalement : font-size passer en em et pas en px **/
-/** Chose à changé principalement : check les sizes avec des border  **/
+/*! ISSUE (EN COURS) : refaire tout le site correctement après avoir fait le truc sur opclassroom*/
+/** Chose à changé principalement : font-size passer en em et pas en px (pas forcément necessaire **/
+/** Chose à changé principalement : refaire la responsivité et surtout refaire toutes les sections (actuel valide : 1 et 3 maitenant il manque 2 4 5  **/
 /** Chose à changé principalement : faire par rapport au div et non au contenu du container **/
 /** Chose à changé principalement : On va faire par étapes on gere d'abord le desktop et ensuite on fait les breakpoint et on va faire ça avec tout les pages 
 j'ai désactivé les autres pages en attendant donc comme ça on peut faire les truc et savoir qui casse quoi **/
+/**! ISSUE 2 : je sais pas comment mettre un titre via la flex box.... (j'ai trouvé !)*/
 
 /* Other Nav */
 
@@ -206,14 +207,36 @@ main>section>div {
 	min-height: 100vh;
 	display: flex;
 	align-items: center;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.container-2 {
+	max-width: 1350px;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
 	justify-content: center;
+}
+
+.title-2 {
+	flex-direction: column;
+	display: flex;
+	box-sizing: border-box;
+	flex-wrap: wrap;
+	margin-top: 25px;
+}
+
+.text-info {
+	display: flex;
+	flex-direction: column;
+	margin-inline-start: 120px;
 }
 
 .img_sn {
 	width: 600px;
-	height: 600px;
-	margin-top: 200px;
-	margin-left: 150px;
+	height: fit-content;
 	position: relative;
 }
 
@@ -223,39 +246,27 @@ main>section>div {
 }
 
 .pfp_sn {
+	width: 600px;
 	margin: auto;
 	position: relative;
 }
 
-.about-me {
-	margin-top: -45rem;
-	margin-bottom: 150px;
-	margin-left: -250px;
-	align-self: center;
-	font: 600 50px 'Outfit', sans-serif;
-	position: relative;
-}
-
-.about-me h2 {
+.about-me  {
 	font: 600 50px 'Outfit', sans-serif;
 }
 
 .animated-text, .animated-text * {
 	box-sizing: border-box;
 	width: auto;
-	height: 200px;
+	height: 50px;
 	font: 600 40px 'Outfit', sans-serif;
 	user-select: none;
 }
 
 .animated-text h2 {
-	width: 600px;
+	width: 500px;
 	height: auto;
 	overflow: hidden;
-	white-space: nowrap;
-	display: inline-block;
-	margin-top: 28rem;
-	right: 3rem;
 	position: relative;
 }
 
@@ -275,50 +286,41 @@ main>section>div {
 	color: #FAF4F4;
 	text-align: left;
 	position: relative;
-	margin-top: 32rem;
-	margin-left: -40.5rem;
 	width: 629px;
 	height: 165px;
 }
 
 @media screen and (max-width: 480px) and (orientation: portrait) {
-	#section-3 {
-		min-height: 100vh;
-		display: flex;
-		flex-direction: column;
+
+	.container-2 {
+		height: 600px;
+		margin-bottom: 25px;
 	}
+
+	.img_sn {
+		width: auto;
+		margin-bottom: 20px;
+	}
+
 	.pfp_sn {
-		position: relative;
+		width: 350px;
 	}
-	.about-me {
-		top: 25%;
-		left: 15%;
-		margin-bottom: 500px;
+	.text-info {
+		width: auto;
+		align-items: center;
+		margin: 0;
 	}
-	.animated-text h2 {
-		font-size: 35px;
-		width: 480px;
-		text-align: center;
-		justify-content: center;
-		margin-left: -250px;
-		margin-top: 400px;
+
+	.animated-text h2, .description-text, #typewriter {
+		font-size: 25px;
+		width: auto;
 	}
-	.animated-text #typewriter {
-		font-size: 35px;
-		text-align: center;
-		justify-content: center;
-		width: 480px;
-		display: flex;
-	}
+
 	.description .description-text {
-		color: #ffffff;
+		flex-wrap: wrap;
+		width: 300px;
 		text-align: center;
-		font: 400 26px 'Outfit', sans-serif;
-		position: relative;
-		margin-top: 35rem;
-		margin-left: -30rem;
-		width: 387px;
-		height: 243px;
+		height: auto;
 	}
 }
 
@@ -331,7 +333,7 @@ main>section>div {
 }
 
 .work {
-	margin-top: 25px;
+	margin-top: 90px;
 	margin-bottom: 150px;
 	align-self: center;
 	font: 600 50px 'Outfit', sans-serif;
