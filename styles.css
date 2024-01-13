@@ -7,9 +7,7 @@
 	font-family: sans-serif;
 	text-decoration: none;
 	list-style: none;
-	/* For Firefox */
 	scrollbar-color: grey transparent;
-	/* ascensseur bleu sur fond blanc */
 }
 
 /*! ISSUE (EN COURS) : refaire tout le site correctement après avoir fait le truc sur opclassroom*/
@@ -17,10 +15,7 @@
 /** Chose à changé principalement : refaire la responsivité et surtout refaire toutes les sections (actuel valide : 1 et 3 maitenant il manque 2 4 5  **/
 /** Chose à changé principalement : faire par rapport au div et non au contenu du container **/
 /** Chose à changé principalement : On va faire par étapes on gere d'abord le desktop et ensuite on fait les breakpoint et on va faire ça avec tout les pages 
-j'ai désactivé les autres pages en attendant donc comme ça on peut faire les truc et savoir qui casse quoi **/
 /**! ISSUE 2 : je sais pas comment mettre un titre via la flex box.... (j'ai trouvé !)*/
-
-/* Other Nav */
 
 a {
 	text-decoration: none;
