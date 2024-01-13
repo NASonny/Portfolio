@@ -289,7 +289,7 @@ main>section>div {
 
 	.img_sn {
 		width: auto;
-		margin-bottom: 20px;
+		margin-bottom: 10px;
 	}
 
 	.pfp_sn {
@@ -299,6 +299,10 @@ main>section>div {
 		width: auto;
 		align-items: center;
 		margin: 0;
+	}
+
+	.animated-text {
+		height: auto;
 	}
 
 	.animated-text h2, .description-text, #typewriter {
@@ -319,6 +323,7 @@ main>section>div {
 #section-4 {
 	min-height: 100vh;
 	display: flex;
+	align-items: center;
 	flex-direction: column;
 }
 
@@ -467,6 +472,11 @@ main>section>div {
 }
 
 @media screen and (max-width: 768px) {
+
+	.work{
+		margin-bottom: 90px;
+	}
+
 	.slide-content {
 		margin: 0 10px;
 	}
@@ -616,6 +626,11 @@ input:focus~label, input:valid~label, textarea:focus~label, textarea:valid~label
 
 @media screen and (max-width: 480px) {
 
+	.container-3 {
+		flex-direction: column;
+		justify-content: center;
+		margin: 0;
+	}
 
 	.title-3 {
 		margin-top: 20px;
@@ -623,6 +638,7 @@ input:focus~label, input:valid~label, textarea:focus~label, textarea:valid~label
 
 	form {
 		margin: 0;
+		margin-right: 20px;
 		max-width: 80%;
 	}
 
