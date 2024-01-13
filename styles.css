@@ -279,21 +279,21 @@ main>section>div {
 
 	.container-2 {
 		height: 600px;
-		margin-bottom: 25px;
+		margin-bottom: 30px;
 	}
 
 	.img_sn {
 		width: auto;
-		margin-bottom: 10px;
 	}
 
 	.pfp_sn {
-		width: 350px;
+		width: 320px;
 	}
 	.text-info {
 		width: auto;
 		align-items: center;
 		margin: 0;
+		margin-bottom: 30px;
 	}
 
 	.animated-text {
@@ -625,10 +625,11 @@ input:focus~label, input:valid~label, textarea:focus~label, textarea:valid~label
 		flex-direction: column;
 		justify-content: center;
 		margin: 0;
+		margin-bottom: 30px;
 	}
 
 	.title-3 {
-		margin-top: 20px;
+		margin-top: 30px;
 	}
 
 	form {
@@ -651,7 +652,6 @@ input:focus~label, input:valid~label, textarea:focus~label, textarea:valid~label
 
 	.container-glass {
 		width: 90%;
-		margin-bottom: 25px;
 		height: fit-content;
 	}
 
@@ -661,6 +661,10 @@ input:focus~label, input:valid~label, textarea:focus~label, textarea:valid~label
 
 	.h1-container {
 		font-size: 25px;
+	}
+
+	.input-group {
+		margin-bottom: 20px;
 	}
 }
 
