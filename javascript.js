@@ -1,7 +1,3 @@
-window.addEventListener('beforeunload', function() {
-    history.scrollRestoration = "manual";
-});
-
 document.addEventListener("DOMContentLoaded", function() {
     const smoothScrollButtons = document.querySelectorAll(".home");
 
@@ -124,6 +120,37 @@ document.addEventListener("DOMContentLoaded", function() {
     };
     writeLoop();
 });
+
+(function() {
+
+    emailjs.init("11uO3Q1QfNQY7qNwj"); // Initialiser avec votre user ID
+    const button = document.getElementById('send-button');
+    const form = document.getElementById('contact-form');
+    
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+  
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      
+      const templateParams = {
+        from_name: name,
+        email_id: email,
+        message: message
+      };
+  
+      emailjs.send('service_zs3gmdy', 'template_q1in8bs', templateParams)
+        .then(function() {
+          console.log('Thank you ' + templateParams['from_name'] +', Mail has been sent.');
+          form.reset();  
+        });
+    });
+
+})();
+
+
+
 
 document.addEventListener ("DOMContentLoaded", function() {
     var swiper = new Swiper('.slide-content', {
